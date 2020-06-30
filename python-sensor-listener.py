@@ -116,6 +116,7 @@ def main(): #main function
                 COvalue = (re.search(r'\d+\.\d+', serialString.decode('utf-8')).group())
                 data.append(COvalue)
                 data.append(time.asctime(time.localtime(time.time())))
+                
                 #writing to file below
                 '''file = open("data.txt", "a")
                 for x in data:
@@ -125,6 +126,7 @@ def main(): #main function
                 file.write(time.asctime(time.localtime(time.time())))
                 file.write('\n')
                 data = []'''
+                
                 #writing to database
                 insert_data(conn, data, table_name)
                 conn.commit()
