@@ -14,12 +14,14 @@ import re #regular expression operators
 serialString = ""   #will hold input data
 val = '0.00'
 list = []
-file = open("TestDOOutput.txt", "w") #opening file for writing, will create if it doesn't exsit
+file = open("Trial2DOoutput.txt", "w") #opening file for writing, will create if it doesn't exsit
+if(file == NULL):
+    print("File could not be opened\n")
 serialNumber = ""
 
 #Opens a serial port for listening and stores it in variable serialPort
 #serialPort will be how we manipulate serial methods
-serialPort = serial.Serial("COM4", baudrate = 9600)
+serialPort = serial.Serial("COM3", baudrate = 9600)
 print("Hello there")
 print(serialPort.name)
 serialPort.write(b"C,5") #tell arduino to send data every 5 seconds
