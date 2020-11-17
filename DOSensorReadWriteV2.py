@@ -11,7 +11,7 @@ import time
 def main_func():
     print('Entered main_func()')
     #May have to change port depending on the computer
-    arduino = serial.Serial('com4', 9600)
+    arduino = serial.Serial('com3', 9600)
     print('Established serial connection to Arduino')
     arduino_data = arduino.readline()
 
@@ -43,11 +43,14 @@ def main_func():
 #list_in_floats = []
 
 print('Program started')
-file = open("TestDOOutput.txt", "w")
+#file = open("DOOutput1.txt", "w")
+#file.write("Opened file\n")
 # Setting up the Arduino
 #schedule.every(10).seconds.do(main_func)
 
 while True:
+    file = open("DOOutput1.txt", "w")
     main_func()
     #schedule.run_pending()
     time.sleep(10)
+    file.close()
