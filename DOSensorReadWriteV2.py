@@ -43,7 +43,7 @@ def main_func():
 #list_in_floats = []
 
 print('Program started')
-file = open("DOOutput1.txt", "w")
+file = open("DOOutput3.txt", "w")
 #file.write("Opened file\n")
 # Setting up the Arduino
 #schedule.every(10).seconds.do(main_func)
